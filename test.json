@@ -1,0 +1,10 @@
+{
+    "platName": "安徽CDN",
+    "alarmId": 3365,
+    "alarmStatus": "PROBLEM",
+    "alarmLevel": "Disaster",
+    "alarmTime": "2017-05-24 09:46:52",
+    "alarmModule": "36.250.10.157",
+    "alarmTitle": "cache011 36.250.10.157 has just been restartedxxxxxxxxxxxxx",
+    "alarmContent": "System uptime (36.250.10.157:system.uptime): 285 days, 22:07:48"
+}

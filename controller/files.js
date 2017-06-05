@@ -1,4 +1,5 @@
 const fs = require('fs')
+const Message = require('../model/message')
 
 let files = {
     readFile(filename) {
@@ -8,7 +9,19 @@ let files = {
                     reject(err)
                 }
                 else {
-                    resolve(file)
+                    let obj = JSON.parse(file)
+                    try {
+                        let msg = new Message(obj)
+                        msg.setSuccess()
+                        msg.setFail = function() {
+                            this.alarmStatus = `FAIL`
+                        }
+                        msg.setFail()
+                        resolve(JSON.stringify(msg))
+                    }
+                    catch (e) {
+                        reject(e)
+                    }
                 }
             })
         })

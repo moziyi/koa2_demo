@@ -20,7 +20,7 @@ app
     .use(logger())
     .use(router.routes())
     .use(router.allowedMethods())
-    .use(static(__dirname, '/public'))
+    //.use(static(__dirname, '/public'))
 
 
 app
