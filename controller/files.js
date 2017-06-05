@@ -13,10 +13,7 @@ let files = {
                     try {
                         let msg = new Message(obj)
                         msg.setSuccess()
-                        msg.setFail = function() {
-                            this.alarmStatus = `FAIL`
-                        }
-                        msg.setFail()
+
                         resolve(JSON.stringify(msg))
                     }
                     catch (e) {
